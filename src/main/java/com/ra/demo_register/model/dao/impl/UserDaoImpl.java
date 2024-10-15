@@ -31,7 +31,7 @@ public class UserDaoImpl implements IUserDao
         // user gửi từ html lên phải có dữ liệu của 3 trường { fullName, username, password }
         user.setStatus(true);
         user.setRoles(roles);
-        user.setPassword(BCrypt.hashpw(user.getPassword(),BCrypt.gensalt()));
+        user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
         Transaction tx = null;
         try (Session session = sessionFactory.openSession())
         {
@@ -57,6 +57,29 @@ public class UserDaoImpl implements IUserDao
             return session.createQuery("from Role r where r.roleName = :_roleName", Role.class)
                     .setParameter("_roleName", roleName)
                     .getSingleResult();
+        }
+        catch (Exception e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public User login(User user)
+    {
+        try (Session session = sessionFactory.openSession())
+        {
+            User userLogin = session.createQuery("from User u where u.username = :_username", User.class)
+                    .setParameter("_username", user.getUsername())
+                    .getSingleResult();
+            if (userLogin != null)
+            {
+                // kiem tra password
+                if(BCrypt.checkpw(user.getPassword(), userLogin.getPassword())) {
+                    return userLogin;
+                }
+            }
+            return null;
         }
         catch (Exception e)
         {

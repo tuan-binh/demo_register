@@ -6,9 +6,14 @@ import com.ra.demo_register.model.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
+
 @Service
 public class UserServiceImpl implements IUserService
 {
+    @Autowired
+    private HttpSession httpSession;
+
     @Autowired
     private IUserDao userDao;
 
@@ -16,5 +21,15 @@ public class UserServiceImpl implements IUserService
     public boolean register(User user)
     {
         return userDao.register(user);
+    }
+
+    @Override
+    public User login(User user)
+    {
+        User userLogin = userDao.login(user);
+
+        httpSession.setAttribute("userLogin", userLogin);
+
+        return userLogin;
     }
 }
