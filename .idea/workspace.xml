@@ -5,24 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6b48887-f26b-4aac-9d3c-ab1bbcba9fe2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/config/InterceptorsAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/controller/admin/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/controller/user/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accessDeniedPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/controller/user/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/controller/user/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/dao/ICartDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/dao/IProductDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/dao/impl/CartDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/dao/impl/ProductDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/entity/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/service/ICartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/service/impl/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d36a1ef0-5d2a-4d4e-b837-df574cf2f9c6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d36a1ef0-5d2a-4d4e-b837-df574cf2f9c6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/config/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/dao/IUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/model/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ra/demo_register/controller/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +38,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -204,7 +204,10 @@
       <updated>1728869437196</updated>
       <workItem from="1728869438109" duration="4298000" />
       <workItem from="1728877670660" duration="176000" />
-      <workItem from="1728953509056" duration="4590000" />
+      <workItem from="1728953509056" duration="8041000" />
+      <workItem from="1729080537945" duration="427000" />
+      <workItem from="1729084143139" duration="251000" />
+      <workItem from="1729130531929" duration="4159000" />
     </task>
     <servers />
   </component>

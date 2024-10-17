@@ -64,7 +64,7 @@ public class AuthController
                 }
                 else
                 {
-                    return "redirect:/user";
+                    return "redirect:/user/product";
                 }
             }
             return "redirect:/login";

@@ -12,4 +12,6 @@ public class UserController
     public String indexUser() {
         return "user/index";
     }
+
+
 }
